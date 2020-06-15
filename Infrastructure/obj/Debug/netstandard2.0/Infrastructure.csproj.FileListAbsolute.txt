@@ -1,0 +1,12 @@
+/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/bin/Debug/netstandard2.0/Infrastructure.deps.json
+/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/bin/Debug/netstandard2.0/Infrastructure.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/bin/Debug/netstandard2.0/Infrastructure.pdb
+/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/bin/Debug/netstandard2.0/Core.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/bin/Debug/netstandard2.0/Core.pdb
+/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/obj/Debug/netstandard2.0/Infrastructure.csprojAssemblyReference.cache
+/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/obj/Debug/netstandard2.0/Infrastructure.AssemblyInfoInputs.cache
+/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/obj/Debug/netstandard2.0/Infrastructure.AssemblyInfo.cs
+/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/obj/Debug/netstandard2.0/Infrastructure.csproj.CoreCompileInputs.cache
+/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/obj/Debug/netstandard2.0/Infrastructure.csproj.CopyComplete
+/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/obj/Debug/netstandard2.0/Infrastructure.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/obj/Debug/netstandard2.0/Infrastructure.pdb

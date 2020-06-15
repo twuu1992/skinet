@@ -58,3 +58,7 @@
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/e_sqlite3.dll
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/e_sqlite3.dll
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Core.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Infrastructure.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Infrastructure.pdb
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Core.pdb
