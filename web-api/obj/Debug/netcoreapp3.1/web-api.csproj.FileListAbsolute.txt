@@ -64,3 +64,8 @@
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Core.pdb
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/AutoMapper.dll
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/obj/Debug/netcoreapp3.1/web-api.MvcApplicationPartsAssemblyInfo.cs
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
