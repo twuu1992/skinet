@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Reflection;
 using Core.Models;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,19 @@ namespace Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+            if (Database.ProviderName == "Microsoft.EntityFrameworkCore.Sqlite")
+            {
+                foreach (var type in modelBuilder.Model.GetEntityTypes())
+                {
+                    var properties = type.ClrType.GetProperties().Where(p => p.PropertyType == typeof(decimal));
+
+                    foreach (var property in properties)
+                    {
+                        modelBuilder.Entity(type.Name).Property(property.Name).HasConversion<double>();
+                    }
+                }
+            }
         }
     }
 }
