@@ -29,6 +29,13 @@ namespace web_api
             services.AddDbContext<StoreContext>(x => x.UseSqlite(_configuration.GetConnectionString("DefaultConnection")));
             services.AddApplicationServices();
             services.AddSwagerDocumentation();
+            services.AddCors(option =>
+            {
+                option.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200");
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +54,9 @@ namespace web_api
             app.UseRouting();
 
             app.UseStaticFiles();
+
+            //use cors to show header
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
