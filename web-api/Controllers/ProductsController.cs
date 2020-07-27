@@ -74,7 +74,7 @@ namespace web_api.Controllers
         [HttpGet("types")]
         public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes()
         {
-            return Ok(await _productRepo.ListAllAsync());
+            return Ok(await _productTypeRepo.ListAllAsync());
         }
     }
 }
