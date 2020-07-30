@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { IProduct } from '../shared/models/product';
 import { ShopService } from './shop.service';
 import { IType } from '../shared/models/productType';
@@ -11,6 +11,7 @@ import { ShopParams } from '../shared/models/shopParams';
   styleUrls: ['./shop.component.scss'],
 })
 export class ShopComponent implements OnInit {
+  @ViewChild('search', { static: true }) searchTerm: ElementRef;
   products: IProduct[];
   types: IType[];
   brands: IBrand[];
@@ -69,11 +70,13 @@ export class ShopComponent implements OnInit {
 
   onBrandSelected(brandId: number) {
     this.shopParams.brandId = brandId;
+    this.shopParams.pageIndex = 1;
     this.getProducts();
   }
 
   onTypeSelected(typeId: number) {
     this.shopParams.typeId = typeId;
+    this.shopParams.pageIndex = 1;
     this.getProducts();
   }
 
@@ -86,7 +89,22 @@ export class ShopComponent implements OnInit {
   // pagination
   onPageChanged(event: any) {
     // console.log(event);
-    this.shopParams.pageIndex = event.page;
+    // only triggered by the actual page number is changed (click the pager button)
+    if (this.shopParams.pageIndex !== event.page) {
+      this.shopParams.pageIndex = event.page;
+      this.getProducts();
+    }
+  }
+
+  onSearch() {
+    this.shopParams.search = this.searchTerm.nativeElement.value;
+    this.shopParams.pageIndex = 1;
+    this.getProducts();
+  }
+
+  onReset() {
+    this.shopParams.search = this.searchTerm.nativeElement.value = null;
+    this.shopParams = new ShopParams();
     this.getProducts();
   }
 }

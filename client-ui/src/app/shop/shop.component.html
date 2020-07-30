@@ -30,9 +30,10 @@
         <app-paging-header [totalCount]="this.totalCount" [pageIndex]="this.shopParams.pageIndex"
           [pageSize]="this.shopParams.pageSize"></app-paging-header>
         <div class="form-inline mt-2 ">
-          <input type="text" class="form-control" style="width: 300px;" placeholder="Search">
-          <button class="btn btn-outline-primary ml-2 my-2">Search</button>
-          <button class="btn btn-outline-success ml-2 my-2">Reset</button>
+          <input type="text" (keyup.enter)="onSearch()" class="form-control" #search style="width: 300px;"
+            placeholder="Search">
+          <button class="btn btn-outline-primary ml-2 my-2" (click)="onSearch()">Search</button>
+          <button class="btn btn-outline-success ml-2 my-2" (click)="onReset()">Reset</button>
         </div>
       </div>
 
