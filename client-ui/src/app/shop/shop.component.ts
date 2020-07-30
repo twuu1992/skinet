@@ -11,6 +11,8 @@ import { ShopParams } from '../shared/models/shopParams';
   styleUrls: ['./shop.component.scss'],
 })
 export class ShopComponent implements OnInit {
+  // get the element (child) of this view
+  // static is true means the search bar is always available
   @ViewChild('search', { static: true }) searchTerm: ElementRef;
   products: IProduct[];
   types: IType[];
