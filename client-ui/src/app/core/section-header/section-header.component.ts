@@ -13,6 +13,6 @@ export class SectionHeaderComponent implements OnInit {
 
   ngOnInit() {
     this.breadcrumbs$ = this.breadcrumbService.breadcrumbs$;
-    console.log(this.breadcrumbs$);
+    // console.log(this.breadcrumbs$);
   }
 }

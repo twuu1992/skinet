@@ -13,7 +13,7 @@ import { ShopParams } from '../shared/models/shopParams';
 export class ShopComponent implements OnInit {
   // get the element (child) of this view
   // static is true means the search bar is always available
-  @ViewChild('search', { static: true }) searchTerm: ElementRef;
+  @ViewChild('search', { static: false }) searchTerm: ElementRef;
   products: IProduct[];
   types: IType[];
   brands: IBrand[];
