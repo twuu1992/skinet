@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/m/DM/GEZyRalcjDEEFbaA2KsshZ6Ytq0ZUsPWxWu8PUFcwPgZoy4KBDJRpuEM8sfrtEkiprCVL5G3Fu3gs7SA==",
+  "dgSpecHash": "1K1P2u3JL/GoNGLHBwykuQsCWEJEWHZnqpQvL3i25yJ+kIzzyX3pS+qIB88bll6/+uZQgxGwGMlLdQ8Y3HhkiA==",
   "success": true,
   "projectFilePath": "/Users/wutong/Documents/Work/Full Stack/skinet/Infrastructure/Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -31,19 +31,24 @@
     "/Users/wutong/.nuget/packages/microsoft.extensions.primitives/3.1.4/microsoft.extensions.primitives.3.1.4.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/wutong/.nuget/packages/pipelines.sockets.unofficial/2.1.16/pipelines.sockets.unofficial.2.1.16.nupkg.sha512",
     "/Users/wutong/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.0.2/sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",
     "/Users/wutong/.nuget/packages/sqlitepclraw.core/2.0.2/sqlitepclraw.core.2.0.2.nupkg.sha512",
     "/Users/wutong/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.0.2/sqlitepclraw.lib.e_sqlite3.2.0.2.nupkg.sha512",
     "/Users/wutong/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.0.2/sqlitepclraw.provider.e_sqlite3.2.0.2.nupkg.sha512",
+    "/Users/wutong/.nuget/packages/stackexchange.redis/2.1.58/stackexchange.redis.2.1.58.nupkg.sha512",
     "/Users/wutong/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/Users/wutong/.nuget/packages/system.collections.immutable/1.7.1/system.collections.immutable.1.7.1.nupkg.sha512",
     "/Users/wutong/.nuget/packages/system.componentmodel.annotations/4.7.0/system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "/Users/wutong/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "/Users/wutong/.nuget/packages/system.diagnostics.performancecounter/4.7.0/system.diagnostics.performancecounter.4.7.0.nupkg.sha512",
+    "/Users/wutong/.nuget/packages/system.io.pipelines/4.7.1/system.io.pipelines.4.7.1.nupkg.sha512",
     "/Users/wutong/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/wutong/.nuget/packages/system.runtime.compilerservices.unsafe/4.7.1/system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
     "/Users/wutong/.nuget/packages/system.text.encodings.web/4.7.1/system.text.encodings.web.4.7.1.nupkg.sha512",
     "/Users/wutong/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512",
+    "/Users/wutong/.nuget/packages/system.threading.channels/4.7.1/system.threading.channels.4.7.1.nupkg.sha512",
     "/Users/wutong/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []

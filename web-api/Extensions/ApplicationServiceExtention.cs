@@ -13,6 +13,7 @@ namespace web_api.Extensions
         {
             services.AddScoped<IProductRepository, ProductRepositry>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IBasketRepository, BasketRepository>();
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.InvalidModelStateResponseFactory = actionContext =>

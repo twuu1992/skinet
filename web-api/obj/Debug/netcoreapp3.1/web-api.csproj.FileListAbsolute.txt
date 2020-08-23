@@ -69,3 +69,12 @@
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/obj/Debug/netcoreapp3.1/web-api.MvcApplicationPartsAssemblyInfo.cs
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Pipelines.Sockets.Unofficial.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/StackExchange.Redis.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/System.Diagnostics.PerformanceCounter.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/System.IO.Pipelines.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/System.Threading.Channels.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
