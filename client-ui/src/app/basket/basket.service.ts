@@ -74,6 +74,56 @@ export class BasketService {
     this.setBasket(basket);
   }
 
+  // add quantity of items
+  incrementItemQuantity(item: IBasketItem) {
+    const basket = this.getCurrentBasket();
+    const foundItemIndex = basket.items.findIndex((i) => i.id === item.id);
+    basket.items[foundItemIndex].quantity++;
+    this.setBasket(basket);
+  }
+  // decrease quantity of items
+  decrementItemQuantity(item: IBasketItem) {
+    const basket = this.getCurrentBasket();
+    const foundItemIndex = basket.items.findIndex((i) => i.id === item.id);
+    // if quantity greater than 1, decrease; otherwise, remove item.
+    if (basket.items[foundItemIndex].quantity > 1) {
+      basket.items[foundItemIndex].quantity--;
+      this.setBasket(basket);
+    } else {
+      this.removeItemFromBasket(item);
+    }
+  }
+
+  removeItemFromBasket(item: IBasketItem) {
+    const basket = this.getCurrentBasket();
+    // check if can find the value of item in the basket
+    if (basket.items.some((i) => i.id === item.id)) {
+      // delete
+      basket.items = basket.items.filter((i) => i.id !== item.id);
+      // check if the basket items more than 1, update basket
+      // otherwise delete the basket
+      if (basket.items.length > 0) {
+        this.setBasket(basket);
+      } else {
+        this.deleteBasket(basket);
+      }
+    }
+  }
+  deleteBasket(basket: IBasket) {
+    return this.http.delete(this.baseUrl + 'basket?id=' + basket.id).subscribe(
+      () => {
+        // remove the source
+        this.basketSource.next(null);
+        this.basketTotalSource.next(null);
+        // remove the basket from local storage
+        localStorage.removeItem('basket_id');
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
   // calculate totals
   private calculateTotals() {
     const basket = this.getCurrentBasket();
