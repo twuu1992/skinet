@@ -1,5 +1,6 @@
 using AutoMapper;
 using Infrastructure.Data;
+using Infrastructure.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,10 @@ namespace web_api
             services.AddAutoMapper(typeof(MappingProfile));
             services.AddControllers();
             services.AddDbContext<StoreContext>(x => x.UseSqlite(_configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppIdentityDbContext>(x =>
+            {
+                x.UseSqlite(_configuration.GetConnectionString("IdentityConnection"));
+            });
 
             // add redis
             services.AddSingleton<IConnectionMultiplexer>(c =>
@@ -37,6 +42,7 @@ namespace web_api
             });
 
             services.AddApplicationServices();
+            services.AddIdentityServices();
             services.AddSwagerDocumentation();
             services.AddCors(option =>
             {
