@@ -1,4 +1,5 @@
 using Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using web_api.Errors;
 
@@ -44,6 +45,13 @@ namespace web_api.Controllers
         public ActionResult GetBadRequestResult(int id)
         {
             return Ok();
+        }
+
+        [HttpGet("testauth")]
+        [Authorize]
+        public ActionResult<string> GetSecretText()
+        {
+            return "This is a secret.";
         }
     }
 }

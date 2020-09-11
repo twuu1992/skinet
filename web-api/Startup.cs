@@ -42,7 +42,7 @@ namespace web_api
             });
 
             services.AddApplicationServices();
-            services.AddIdentityServices();
+            services.AddIdentityServices(_configuration);
             services.AddSwagerDocumentation();
             services.AddCors(option =>
             {
@@ -72,6 +72,8 @@ namespace web_api
 
             //use cors to show header
             app.UseCors("CorsPolicy");
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
