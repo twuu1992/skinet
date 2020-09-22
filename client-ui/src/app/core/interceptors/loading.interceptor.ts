@@ -16,7 +16,11 @@ export class LoadingInterceptor implements HttpInterceptor {
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    this.busyService.busy();
+    // search the url of request
+    if (!req.url.includes('emailexists')) {
+      // show spinner
+      this.busyService.busy();
+    }
     return next.handle(req).pipe(
       delay(1000),
       finalize(() => {

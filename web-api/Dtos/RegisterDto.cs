@@ -10,7 +10,7 @@ namespace web_api.Dtos
         [EmailAddress]
         public string Email { get; set; }
         [Required]
-        [RegularExpression("^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$", ErrorMessage =
+        [RegularExpression("(?=^.{6,10}$)(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\\s).*$", ErrorMessage =
          "Password must have 1 uppercase or lowercase, 1 number, 1 non alphanumeric and at least 6 characters")]
         public string Password { get; set; }
     }
