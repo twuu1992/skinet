@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, ReplaySubject, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
@@ -10,12 +10,18 @@ import { Router } from '@angular/router';
 })
 export class AccountService {
   apiUrl = environment.apiUrl;
-  private currentUserSource = new BehaviorSubject<IUser>(null);
+  // replay subject will cache one user at one time
+  private currentUserSource = new ReplaySubject<IUser>(1);
   currentUser$ = this.currentUserSource.asObservable();
 
   constructor(private http: HttpClient, private router: Router) {}
 
   getCurrentUser(token: string) {
+    // if user is not login, set current user to null
+    if (token === null) {
+      this.currentUserSource.next(null);
+      return of(null);
+    }
     let headers = new HttpHeaders();
     headers = headers.set('Authorization', `Bearer ${token}`);
 
@@ -25,10 +31,6 @@ export class AccountService {
         this.currentUserSource.next(user);
       })
     );
-  }
-
-  getCurrentUserValue() {
-    return this.currentUserSource.value;
   }
 
   login(values: any) {
