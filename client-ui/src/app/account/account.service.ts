@@ -70,4 +70,12 @@ export class AccountService {
   checkEmailExists(email: string) {
     return this.http.get(this.apiUrl + 'account/emailexists?email=' + email);
   }
+
+  getUserAddress() {
+    return this.http.get<IAddress>(this.apiUrl + 'account/address');
+  }
+
+  updateUserAddress(address: IAddress) {
+    return this.http.put<IAddress>(this.apiUrl + 'account/address', address);
+  }
 }
