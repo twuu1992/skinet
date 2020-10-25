@@ -32,6 +32,8 @@ namespace Infrastructure.Data.Migrations
                     BuyerEmail = table.Column<string>(nullable: true),
                     OrderDate = table.Column<DateTimeOffset>(nullable: false),
                     DeliveryMethodId = table.Column<int>(nullable: true),
+                    ShipToAddress_FirstName = table.Column<string>(nullable: true),
+                    ShipToAddress_LastName = table.Column<string>(nullable: true),
                     ShipToAddress_Street = table.Column<string>(nullable: true),
                     ShipToAddress_City = table.Column<string>(nullable: true),
                     ShipToAddress_State = table.Column<string>(nullable: true),

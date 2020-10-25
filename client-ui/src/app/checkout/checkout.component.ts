@@ -29,6 +29,8 @@ export class CheckoutComponent implements OnInit {
   createCheckoutForm() {
     this.checkoutForm = this.fb.group({
       addressForm: this.fb.group({
+        firstname: [null, Validators.required],
+        lastname: [null, Validators.required],
         street: [null, Validators.required],
         city: [null, Validators.required],
         state: [null, Validators.required],
@@ -47,6 +49,7 @@ export class CheckoutComponent implements OnInit {
     this.accountService.getUserAddress().subscribe(
       (address) => {
         if (address) {
+          console.log(address);
           this.checkoutForm.get('addressForm').patchValue(address);
         }
       },
