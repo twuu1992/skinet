@@ -91,3 +91,4 @@
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Stripe.net.dll

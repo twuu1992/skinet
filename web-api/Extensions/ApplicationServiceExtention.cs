@@ -14,6 +14,7 @@ namespace web_api.Extensions
         {
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IPaymentService, PaymentService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IProductRepository, ProductRepositry>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
