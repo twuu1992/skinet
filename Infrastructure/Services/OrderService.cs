@@ -35,8 +35,18 @@ namespace Infrastructure.Services
             var deliveryMethod = await _unitOfWork.Repository<DeliveryMethod>().GetByIdAsync(deliveryMethodId);
             // calculate subtotal
             var subtotal = items.Sum(i => i.Price * i.Quantity);
+
+            // check if order existed
+            var spec = new OrderByPaymentIntentIdWithItemsSpecification(basket.PaymentIntentId);
+            var existingOrder = await _unitOfWork.Repository<Order>().GetEntityWithSpec(spec);
+
+            if (existingOrder != null)
+            {
+                _unitOfWork.Repository<Order>().Delete(existingOrder);
+            }
+
             // create order
-            var order = new Order(buyerEmail, deliveryMethod, shippingAddress, items, subtotal);
+            var order = new Order(buyerEmail, deliveryMethod, shippingAddress, items, subtotal, basket.PaymentIntentId);
             // save to db
             // TODO:
             _unitOfWork.Repository<Order>().Add(order);
@@ -44,7 +54,6 @@ namespace Infrastructure.Services
 
             // nothing return from db
             if (result <= 0) return null;
-            await _basketRepository.DeleteBasketAsync(basketId);
 
             // return order
             return order;

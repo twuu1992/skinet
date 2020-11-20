@@ -30,6 +30,8 @@ namespace Infrastructure.Services
             var basket = await _basketRepository.GetBasketAsync(basketId);
             var shippingPrice = 0m;
 
+            if (basket == null) return null;
+
             // check if delivery method in basket has value
             if (basket.DeliveryMethodId.HasValue)
             {

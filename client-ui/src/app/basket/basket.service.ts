@@ -205,7 +205,6 @@ export class BasketService {
           (basket: IBasket) => {
             // update current basket
             this.basketSource.next(basket);
-            console.log(this.getCurrentBasket());
           },
           (error) => {
             console.log(error);

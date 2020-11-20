@@ -3,6 +3,7 @@ using Core.Interfaces;
 using Core.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using web_api.Errors;
 
 namespace web_api.Controllers
 {
@@ -19,7 +20,11 @@ namespace web_api.Controllers
         [HttpPost("{basketId}")]
         public async Task<ActionResult<CustomerBasket>> CreateOrUpdatePaymentIntent(string basketId)
         {
-            return await _paymentService.CreateOrUpdatePaymentIntent(basketId);
+            var basket = await _paymentService.CreateOrUpdatePaymentIntent(basketId);
+
+            if (basket == null) return BadRequest(new ApiResponse(400, "Error happened with basket"));
+
+            return basket;
         }
     }
 }

@@ -9,8 +9,9 @@ namespace Core.Models.OrderAggregate
         {
         }
 
-        public Order(string buyerEmail, DeliveryMethod deliveryMethod, Address shipToAddress, IReadOnlyList<OrderItem> orderItems, decimal subtotal)
+        public Order(string buyerEmail, DeliveryMethod deliveryMethod, Address shipToAddress, IReadOnlyList<OrderItem> orderItems, decimal subtotal, string paymentIntentId)
         {
+            PaymentIntentId = paymentIntentId;
             BuyerEmail = buyerEmail;
             DeliveryMethod = deliveryMethod;
             ShipToAddress = shipToAddress;
