@@ -98,8 +98,8 @@ export class CheckoutPaymentComponent implements AfterViewInit, OnDestroy {
       const paymentResult = await this.confirmPaymentWithStripe(basket);
 
       if (paymentResult.paymentIntent) {
-        // update order status
-        this.basketService.deleteLocalBasket(basket.id);
+        // TODO: update order status
+        this.basketService.deleteBasket(basket);
         // redirect to success page with order
         const navigationExtras: NavigationExtras = { state: createOrder };
         this.router.navigate(['checkout/success'], navigationExtras);
