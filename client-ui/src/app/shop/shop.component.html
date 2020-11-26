@@ -4,7 +4,7 @@
       <section class="col-3">
         <h5 class="text-warning ml-3 mt-3 mb-3">Sort</h5>
         <select class="custom-select mb-3" (change)="onSortSelected($event.target.value)">
-          <option *ngFor="let sort of sortOptions" [value]="sort.value">
+          <option *ngFor="let sort of sortOptions" [value]="sort.value" [selected]="this.shopParams.sort === sort.value">
             {{sort.name}}</option>
         </select>
 
@@ -44,7 +44,7 @@
         </div>
         <div class="d-flex justify-content-center" *ngIf="this.totalCount > 0">
           <app-pager [totalCount]="this.totalCount" [pageSize]="this.shopParams.pageSize"
-            (pageChanged)="onPageChanged($event)">
+            (pageChanged)="onPageChanged($event)" [pageNumber]="this.shopParams.pageIndex">
           </app-pager>
         </div>
 
