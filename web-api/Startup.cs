@@ -52,11 +52,6 @@ namespace web_api
         {
             services.AddAutoMapper(typeof(MappingProfile));
             services.AddControllers();
-            services.AddDbContext<StoreContext>(x => x.UseSqlite(_configuration.GetConnectionString("DefaultConnection")));
-            services.AddDbContext<AppIdentityDbContext>(x =>
-            {
-                x.UseSqlite(_configuration.GetConnectionString("IdentityConnection"));
-            });
 
             // add redis
             services.AddSingleton<IConnectionMultiplexer>(c =>

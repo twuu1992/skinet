@@ -95,3 +95,8 @@
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/MySqlConnector.dll
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/Pomelo.JsonObject.dll
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/SeedData/.DS_Store
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/SeedData/brands.json
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/SeedData/delivery.json
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/SeedData/products.json
+/Users/wutong/Documents/Work/Full Stack/skinet/web-api/bin/Debug/netcoreapp3.1/SeedData/types.json
