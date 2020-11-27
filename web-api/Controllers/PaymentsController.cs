@@ -4,6 +4,7 @@ using Core.Interfaces;
 using Core.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Stripe;
 using web_api.Errors;
@@ -14,13 +15,14 @@ namespace web_api.Controllers
     public class PaymentsController : BaseApiController
     {
         private readonly IPaymentService _paymentService;
-        private const string WhSecret = "whsec_VQ0fUigKY5AJ4GhEEc55Pl990RP85ODx";
+        private string _WhSecret;
         private readonly ILogger<IPaymentService> _logger;
-        public PaymentsController(IPaymentService paymentService, ILogger<IPaymentService> logger)
+        public PaymentsController(IPaymentService paymentService, ILogger<IPaymentService> logger,
+        IConfiguration config)
         {
             _logger = logger;
             _paymentService = paymentService;
-
+            _WhSecret = config.GetSection("StripeSettings:WhSecret").Value;
         }
 
         [Authorize]
@@ -39,7 +41,7 @@ namespace web_api.Controllers
         {
             var json = await new StreamReader(HttpContext.Request.Body).ReadToEndAsync();
 
-            var stripeEvent = EventUtility.ConstructEvent(json, Request.Headers["Stripe-Signature"], WhSecret);
+            var stripeEvent = EventUtility.ConstructEvent(json, Request.Headers["Stripe-Signature"], _WhSecret);
 
             // read event from stripe webhook
 

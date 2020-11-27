@@ -8,7 +8,6 @@ import { ShopParams } from '../shared/models/shopParams';
 import { IProduct } from '../shared/models/product';
 import { ObjectUnsubscribedError, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { debug } from 'console';
 
 @Injectable({
   providedIn: 'root',

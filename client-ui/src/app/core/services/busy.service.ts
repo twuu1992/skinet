@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { NgxSpinner } from 'ngx-spinner/lib/ngx-spinner.enum';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 @Injectable({

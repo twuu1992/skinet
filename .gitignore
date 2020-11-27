@@ -1,2 +1,10 @@
 *.png
 *.rdb
+obj
+bin
+*.db
+appsettings.json
+settings.json
+publish
+wwwroot
+.idea
